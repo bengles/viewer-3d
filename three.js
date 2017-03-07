@@ -17041,6 +17041,12 @@ THREE.CubeCamera = function ( near, far, cubeResolution ) {
 
 };
 
+function onWindowResize() {
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize( window.innerWidth, window.innerHeight );
+			}
+
 THREE.CubeCamera.prototype = Object.create( THREE.Object3D.prototype );
 THREE.CubeCamera.prototype.constructor = THREE.CubeCamera;
 
