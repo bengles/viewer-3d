@@ -106,7 +106,7 @@
             var mtlLoader = new THREE.MTLLoader();
             mtlLoader.setBaseUrl('assets/');
             mtlLoader.setPath('assets/');
-            mtlLoader.load('input2.mtl', function (materials) {
+            mtlLoader.load('default.mtl', function (materials) {
 
                 materials.preload();
 
@@ -116,7 +116,7 @@
                 var objLoader = new THREE.OBJLoader();
                 objLoader.setMaterials(materials);
                 objLoader.setPath('assets/');
-                objLoader.load('input2.obj', function (object) {
+                objLoader.load('default.obj', function (object) {
 
                     scene.add(object);
 
